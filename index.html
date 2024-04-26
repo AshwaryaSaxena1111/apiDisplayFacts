@@ -20,11 +20,20 @@
             const fact = data.value;
             displayFact(fact);
         }
+
+       
         function displayFact(fact){
             const factBox = document.getElementById('factBox');
             const boxContent = `<p>${fact}</p>`;
             factBox.innerHTML = boxContent;
         }
+     
+        (async function () {
+                    const response = await fetch('https://api.chucknorris.io/jokes/random');
+                    const data = await response.json();
+                    const boxDiv = document.querySelector('.box');
+                    boxDiv.textContent = JSON.stringify(data);
+            })();
     </script>
 
 </body>

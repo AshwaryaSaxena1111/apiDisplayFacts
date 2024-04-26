@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+.container {
+    width: 400px;
+    height: 330px;
+    background-color: #dfd6d6;
+    text-align: center;
+    padding: 20px;
+}
+.box{
+    width: 380px;
+    height:200px;
+    margin-left: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(162, 135, 135);
+}
+.btn{
+    width: 165px;
+    height: 65px;
+    margin-left: 111px;
+    margin-top: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(192, 139, 139);
+}

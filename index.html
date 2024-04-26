@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="factBox"></div>
+        <button class="btn" onclick="getRandomFact()">Get Random Fact</button>
+    </div>
+<script>
+        async function getRandomFact() {
+            const response = await fetch('https://api.chucknorris.io/jokes/random',{
+                method:"GET",
+            });
+            const data = await response.json();
+            const fact = data.value;
+            displayFact(fact);
+        }
+        function displayFact(fact){
+            const factBox = document.getElementById('factBox');
+            const boxContent = `<p>${fact}</p>`;
+            factBox.innerHTML = boxContent;
+        }
+    </script>
+
+</body>
+</html>
